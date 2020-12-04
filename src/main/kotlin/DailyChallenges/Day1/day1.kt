@@ -3,6 +3,10 @@ package DailyChallenges.Day1
 import java.io.File
 
 fun day1(){
+
+    // Q1: [...] Specifically, they need you to find the two entries that sum to 2020 and then multiply those two numbers together.
+    // Q2: [...] In your expense report, what is the product of the three entries that sum to 2020?
+
     val array = loadTxt()
     puzzle1(array)
     puzzle2(array)

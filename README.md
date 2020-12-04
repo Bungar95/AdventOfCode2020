@@ -9,19 +9,3 @@ People use them as a speed contest, interview prep, company training, university
 --- Credits ---
 
 Puzzles, Code, & Design: Eric Wastl
-
-
-Beta Testing:
-
-Tim Giannetti
-
-Ben Lucek
-
-JP Burke
-
-Aneurysm9
-
-Andrew Skalski
-
-
-Community Managers: Danielle Lucek and Aneurysm9

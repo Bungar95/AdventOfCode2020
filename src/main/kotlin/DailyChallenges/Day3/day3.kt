@@ -22,7 +22,7 @@ fun day3puzzle1() {
 
 fun day3puzzle2() {
     //Q2: What do you get if you multiply together the number of trees encountered on each of the listed slopes?
-    var result = doSlope(1, 1)
+    var result: BigInteger = doSlope(1, 1)
     result *= doSlope(3, 1)
     result *= doSlope(5, 1)
     result *= doSlope(7, 1)
@@ -30,9 +30,9 @@ fun day3puzzle2() {
     println("Puzzle 2: (1,1)*(3,1)*(5,1)*(7,1)*(1,3) -> $result trees")
 }
 
-fun doSlope(rowNum: Int, columnNum: Int): Int {
+fun doSlope(rowNum: Int, columnNum: Int): BigInteger {
 
-    var treeCounter = 0
+    var treeCounter : Int = 0
     var x=0 //row
     var y=0 //column
     val right = rowNum
@@ -45,7 +45,7 @@ fun doSlope(rowNum: Int, columnNum: Int): Int {
             y = updateColumn(y, right, maxRowSize)
             x += down
         } catch (e: Exception){
-            return treeCounter
+            return treeCounter.toBigInteger()
         }
     }
 }

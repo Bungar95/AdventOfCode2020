@@ -6,6 +6,7 @@ import java.util.regex.Pattern
 val hexadecimal : Pattern = Pattern.compile("#([0-9a-f]{6})$");
 val onlyDigits : Pattern = Pattern.compile("[0-9]+")
 var passwordMap = mutableMapOf<String, Any?>()
+var validNoRulesPasswordCounter: Int = 0
 var validPasswordCounter: Int = 0
 
 /*
@@ -44,8 +45,8 @@ fun day4(){
             passwordMap.clear()
         }
     }
-
-    println(validPasswordCounter)
+    println("Q1: Without rules, $validNoRulesPasswordCounter valid passwords.")
+    println("Q2: With set rules, $validPasswordCounter valid passwords.")
 }
 
 fun processPassword(passwordMap: MutableMap<String, Any?>) {
@@ -57,8 +58,11 @@ fun processPassword(passwordMap: MutableMap<String, Any?>) {
         passwordMap.containsKey("hcl") &&
         passwordMap.containsKey("ecl") &&
         passwordMap.containsKey("byr") &&
-        passwordMap.containsKey("hgt"))
+        passwordMap.containsKey("hgt")){
+            validNoRulesPasswordCounter++ //Q1
             iyrProcess(passwordMap["iyr"].toString())
+    }
+
 }
 
 fun iyrProcess(issue: String) {

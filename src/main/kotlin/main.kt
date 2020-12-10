@@ -1,9 +1,9 @@
-import DailyChallenges.Day1.day1
-import DailyChallenges.Day2.day2
-import DailyChallenges.Day3.day3
-import DailyChallenges.Day4.day4
-import DailyChallenges.Day5.day5
-import DailyChallenges.Day6.day6
+import dailyChallenges.day1.day1
+import dailyChallenges.day2.day2
+import dailyChallenges.day3.day3
+import dailyChallenges.day4.day4
+import dailyChallenges.day5.day5
+import dailyChallenges.day6.day6
 
 fun main() {
 

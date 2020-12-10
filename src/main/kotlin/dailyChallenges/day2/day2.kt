@@ -1,13 +1,13 @@
-package DailyChallenges.Day2
+package dailyChallenges.day2
 
-import DailyChallenges.loadTxtAsString
+import dailyChallenges.loadTxtAsString
 
 var puzzle1Counter = 0
 var puzzle2Counter = 0
 
 fun day2(){
 
-    val array = loadTxtAsString("src/main/kotlin/DailyChallenges/Day2/day2.txt")
+    val array = loadTxtAsString("src/main/kotlin/dailyChallenges/day2/day2.txt")
 
     for (i in array){
         var min = i.split(":")[0].split(" ")[0].split("-")[0].toInt()

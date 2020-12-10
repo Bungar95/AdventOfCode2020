@@ -1,6 +1,6 @@
-package DailyChallenges.Day4
+package dailyChallenges.day4
 
-import DailyChallenges.loadTxtAsString
+import dailyChallenges.loadTxtAsString
 import java.util.regex.Pattern
 
 val hexadecimal : Pattern = Pattern.compile("#([0-9a-f]{6})$");
@@ -29,7 +29,7 @@ cid (Country ID) - ignored, missing or not.
 */
 
 fun day4(){
-    val array = loadTxtAsString("src/main/kotlin/DailyChallenges/Day4/day4.txt")
+    val array = loadTxtAsString("src/main/kotlin/dailyChallenges/day4/day4.txt")
     passwordMap.clear()
     for(row in array){
         if(row.isNotBlank()){

@@ -1,10 +1,9 @@
-package DailyChallenges.Day5
+package dailyChallenges.day5
 
-import DailyChallenges.loadTxtAsString
-import java.util.*
+import dailyChallenges.loadTxtAsString
 
 fun day5() {
-    val fileArray = loadTxtAsString("src/main/kotlin/DailyChallenges/Day5/day5.txt")
+    val fileArray = loadTxtAsString("src/main/kotlin/dailyChallenges/day5/day5.txt")
     var max: Int = 0
     var puzzle2: MutableList<Int> = arrayListOf(1)
 
@@ -14,7 +13,6 @@ fun day5() {
         var arrayColumn = arrayOf(0, 7)
         var rowSeat: Int = 0
         var columnSeat: Int = 0
-        var result: Int = 0
 
         println(row)
         for (i in row) {
@@ -23,14 +21,14 @@ fun day5() {
                 "F", "B" -> {
                     if(checkIfFinalSeat(arrayRow))
                         rowSeat = declareSeat(i.toString(), arrayRow)
-                    println("${arrayRow[0]} ${arrayRow[1]}")
+                    //println("${arrayRow[0]} ${arrayRow[1]}")
                     arrayRow = appointSeat(i.toString(), arrayRow)
 
                 }
                 "R", "L" -> {
                     if(checkIfFinalSeat(arrayColumn))
                         columnSeat = declareSeat(i.toString(), arrayColumn)
-                    println("${arrayColumn[0]} ${arrayColumn[1]}")
+                    //println("${arrayColumn[0]} ${arrayColumn[1]}")
                     arrayColumn = appointSeat(i.toString(), arrayColumn)
 
                 }
@@ -38,7 +36,7 @@ fun day5() {
         }
 
         println("$rowSeat, $columnSeat, ${rowSeat*8+columnSeat}")
-        result = (rowSeat*8)+columnSeat
+        var result = (rowSeat*8)+columnSeat
         puzzle2.add(result)
         if(result > max) max = result
 

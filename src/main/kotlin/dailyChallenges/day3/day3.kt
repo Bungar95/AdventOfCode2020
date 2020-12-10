@@ -1,13 +1,11 @@
-package DailyChallenges.Day3
-import kotlin.math.*
+package dailyChallenges.day3
 
-import DailyChallenges.loadTxtAsString
+import dailyChallenges.loadTxtAsString
 import java.lang.Exception
 import java.math.BigInteger
-import kotlin.time.times
 
 
-val array = loadTxtAsString("src/main/kotlin/DailyChallenges/Day3/day3.txt")
+val array = loadTxtAsString("src/main/kotlin/dailyChallenges/day3/day3.txt")
 
 fun day3() {
 

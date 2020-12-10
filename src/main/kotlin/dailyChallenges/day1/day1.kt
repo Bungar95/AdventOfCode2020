@@ -1,14 +1,13 @@
-package DailyChallenges.Day1
+package dailyChallenges.day1
 
-import DailyChallenges.loadTxtAsInt
-import java.io.File
+import dailyChallenges.loadTxtAsInt
 
 fun day1(){
 
     // Q1: [...] Specifically, they need you to find the two entries that sum to 2020 and then multiply those two numbers together.
     // Q2: [...] In your expense report, what is the product of the three entries that sum to 2020?
 
-    val array = loadTxtAsInt("src/main/kotlin/DailyChallenges/Day1/day1.txt")
+    val array = loadTxtAsInt("src/main/kotlin/dailyChallenges/day1/day1.txt")
     day1puzzle1(array)
     day1puzzle2(array)
 }

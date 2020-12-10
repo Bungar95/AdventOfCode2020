@@ -1,4 +1,4 @@
-package DailyChallenges
+package dailyChallenges
 
 import java.io.File
 

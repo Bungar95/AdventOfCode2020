@@ -5,6 +5,7 @@ import dailyChallenges.day4.day4
 import dailyChallenges.day5.day5
 import dailyChallenges.day6.day6
 import dailyChallenges.day7.day7
+import dailyChallenges.day8.Day8
 
 fun main() {
 
@@ -19,6 +20,7 @@ fun main() {
             "day5" -> day5()
             "day6" -> day6()
             "day7" -> day7()
+            "day8" -> Day8().day8()
             "exit", "leave", "c" -> {
                 println("Bye!")
                 return

@@ -2,9 +2,9 @@ package dailyChallenges.day7
 
 import java.io.File
 
-var bagThatContainsShinyGold = mutableListOf<String>()
-var bagWithBagWithShinyGoldBagAKABagInception = mutableListOf<String>()
-var shinyCount = 0
+//result should be 211
+
+var bagsWithShiny = emptySet<String>().toMutableSet()
 val bagContents =
     File("src/main/kotlin/dailyChallenges/day7/day7.txt").readLines()
         .associate { line ->
@@ -19,37 +19,26 @@ val bagContents =
 
 fun day7() {
 
-    findBagsWithShinyBags()
-    bagception() // bags with bags with shiny gold bags
-    day7puzzle1()
-
-}
-
-fun day7puzzle1() {
-    println(shinyCount)
-}
-
-fun bagception() {
-   loop@for (i in bagContents) {
-        //if(i.value.isEmpty()) println(i) empty bags
-        //if(i.value.size == 2) println(i) check how many bags a bag contains
-        for (j in i.value) {
-            if(j.second in bagThatContainsShinyGold || j.second == "shiny gold") {
-                println(i)
-                shinyCount++
-                continue@loop
-            }
-        }
+    bagsWithShiny.add("shiny gold")
+    for(bag in bagContents){
+        recursive(bag.key, bag.value)
     }
+    val shiny = bagsWithShiny.size
+    println("$shiny")
 }
 
-fun findBagsWithShinyBags() {
-    for (i in bagContents){
-        //if(i.value.isEmpty()) println(i) empty bags
-        //if(i.value.size == 2) println(i) check how many bags a bag contains
-        for(j in i.value){
-            if(j.second.contains("shiny gold"))
-            bagThatContainsShinyGold.add(i.key)
-        }
+fun recursive(key: String, value: List<Pair<Int, String>>) {
+
+    if(key == "shiny gold"){
+        return
+    }
+
+    for (i in value){
+
+        if(i.second in bagsWithShiny || i.second == "shiny gold"){
+            bagsWithShiny.add(key)
+            return
+        }else if(i.second.isBlank()) return
+        else recursive(i.second, bagContents.getValue(i.second))
     }
 }

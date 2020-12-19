@@ -1,6 +1,7 @@
 import dailyChallenges.day1.Day1
 import dailyChallenges.day10.Day10
 import dailyChallenges.day12.Day12
+import dailyChallenges.day13.Day13
 import dailyChallenges.day2.Day2
 import dailyChallenges.day3.Day3
 import dailyChallenges.day4.Day4
@@ -28,6 +29,7 @@ fun main() {
             "day10" -> Day10().day10()
             "day11" -> println("Didn't feel like doing this one, sorry mate.")
             "day12" -> Day12().day12()
+            "day13" -> Day13().day13()
             "exit", "leave", "c" -> {
                 println("Bye!")
                 return

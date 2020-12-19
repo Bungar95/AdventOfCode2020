@@ -5,7 +5,7 @@ import dailyChallenges.loadTxtAsInt
 class Day10 {
 
     var oneDifference = 0
-    var threeDifference = 1
+    var threeDifference = 1 // part of challenge: *In addition, your device has a built-in joltage adapter rated for 3 jolts higher than the highest-rated adapter in your bag.*
 
     fun day10(){
         var array = loadTxtAsInt("src/main/kotlin/dailyChallenges/day10/day10.txt").sorted()

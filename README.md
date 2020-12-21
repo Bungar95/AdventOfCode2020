@@ -16,5 +16,7 @@ Puzzles, Code, & Design: Eric Wastl
 # Jetbrains challenge
 
 Projects made during a 30 day challenge by JetBrains.
+
 During the challenge I decided to start learning Kotlin.
+
 This are the projects I've done during the challenge.

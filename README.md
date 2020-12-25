@@ -1,4 +1,4 @@
-# Kotlin repository
+# Kotlin repository (terminal projects)
 I've merged (currently) 2 of my previous projects: a '30day challenge' which I've done in kotlin, and Advent of Code 2020.
 
 # AdventOfCode2020
